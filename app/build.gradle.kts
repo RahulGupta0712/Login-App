@@ -53,4 +53,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation ("io.github.shashank02051997:FancyToast:2.0.2") // toast
+
+    // google sign in
+    implementation ("androidx.credentials:credentials:1.3.0")
+    implementation ("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation ("com.google.android.libraries.identity.googleid:googleid:+")
+
+
 }

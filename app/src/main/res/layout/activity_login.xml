@@ -96,11 +96,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:background="@android:color/transparent"
-        android:importantForAccessibility="no" app:tint="@color/gray"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="@+id/passwordEditText2"
         app:layout_constraintEnd_toEndOf="@+id/passwordEditText2"
         app:layout_constraintTop_toTopOf="@+id/passwordEditText2"
-        app:srcCompat="@drawable/show_password" />
+        app:srcCompat="@drawable/show_password"
+        app:tint="@color/gray" />
 
     <TextView
         android:id="@+id/forgotPasswordButton"
@@ -130,7 +131,7 @@
         android:id="@+id/registerButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@android:color/transparent"
         android:text="@string/create_an_account"
         android:textColor="@color/blue"
@@ -138,4 +139,62 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/light_grey"
+        android:drawableLeft="@drawable/google"
+        android:text="Continue with Google"
+        android:textColor="@color/dim_gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/registerButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/signInMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/signInMessage"
+        app:layout_constraintTop_toTopOf="@+id/signInMessage"
+        app:srcCompat="@drawable/line" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/signInMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="or sign in with"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:fontFamily="monospace"
+        app:layout_constraintBottom_toBottomOf="@+id/line2"
+        app:layout_constraintEnd_toStartOf="@+id/line1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/line2"
+        app:layout_constraintTop_toTopOf="@+id/line2" />
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:tint="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/googleSignInButton"
+        app:layout_constraintEnd_toStartOf="@+id/signInMessage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton2"
+        app:srcCompat="@drawable/line" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
