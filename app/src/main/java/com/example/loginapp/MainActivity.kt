@@ -29,10 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         binding.loginButton.setOnClickListener{
             startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
 
         binding.registerButton.setOnClickListener{
             startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
         }
     }
 
